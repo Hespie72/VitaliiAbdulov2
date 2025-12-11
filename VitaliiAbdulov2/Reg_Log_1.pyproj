@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>aee0276b-3c0a-4336-a83a-9ab28f9b477d</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>VitaliiAbdulov2.py</StartupFile>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>reglog2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>VitaliiAbdulov2</Name>
+    <Name>Reg_Log_1</Name>
     <RootNamespace>VitaliiAbdulov2</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -21,7 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="VitaliiAbdulov2.py" />
+    <Compile Include="reglog2.py" />
+    <Compile Include="reglog1.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
