@@ -1,20 +1,20 @@
 import random
-k = ["kasutaja1",]
-s = ["salasõna1",]
-sõna = ["auto",]
+k = ["kasutaja1", "nimi2"]
+s = ["salasõna1", "parool2"]
+sõna = ["auto1", "sõna2"]
 #reg
-def reg():
+def reg(k, s, sõna):
     while True:
-                N = input("Sisetage nimi: ")
-                if N in k:
-                    print("vale nimi palun sisesta oõige nimi")
-                else:
-                    break
+        N = input("Sisetage nimi: ")
+        if N in k:
+            print("vale nimi palun sisesta oõige nimi")
+        else:
+            k.append(N)
+            break
     REGIS = input("kas sa tahad luua parool (jah/ei):" )
     if REGIS == "jah":
-        P = input("Sisetage parool: ")         
-        k.append(N)
-        s.append(P)
+        Par = input("Sisetage parool: ")         
+        s.append(Par)
     elif REGIS == "ei":
         str0 = ".,:;!_*-+()/#¤%&"
         str1 = '0123456789'
@@ -33,45 +33,48 @@ def reg():
     SS = input("Sisestage sõna: ")
     sõna.append(SS)
 #log
-def log():
+def log(s, k):
     while True:
         N = input("Sisetage nimi: ")
-        P = input("Sisetage parool: ")
+        Par = input("Sisetage parool: ")
         if_autoriseeritud = False
-        if N in k and P in s:
+        if N in k and Par in s:
             if_autoriseeritud = True
+            print("Olete oma kontole edukalt sisse loginud.")
             break
         else: 
             print("vale parool või nimi")
 #muuda unustatud parool
-def muudaP():
+def muudaP(s, k):
     while True:
         N = input("Sisetage nimi: ")
         SS = input("Sisetage proovisõna: ")
-        if N in k and SS in sõna:
+        if N in k and sõna[k.index(N)]:
             uusparool = input("Sisestage uus parool: ")
-            s.append(uusparool)
+            indeksp = k.index(N)
+            s[indeksp] = uusparool
             break
         else:
-            print("vale nimi või proovisõna")   
+            print("vale nimi või proovisõna")
+    return(k, s)
 #muuda parool ja nimi
-def muuda():
+def muuda(k, s):
     while True:
         N = input("Sisetage nimi: ")
-        if N in k:
-            P = input("Sisestage parool: ")
-            if P in s:
-                SS = input("Sisetage proovisõna: ")
-                break
-        if N in k and P in s and SS in sõna:
+        Par = input("Sisestage parool: ")
+        if N in k and s[k.index(N)] == Par:
             T = input("mis sa tahad muuda Parool või Nimi (P/N): ")
             if T == "P":
                 uusparool = input("Sisestage uus parool: ")
+                indeksp = k.index(N)
+                s[indeksp] = uusparool
                 break
             elif T == "N":
-                uusnimi = input("Sisetage uus nimi")
+                uusnimi = input("Sisetage uus nimi: ")
+                indeksn = s.index(Par)
+                k[indeksn] = uusnimi
                 break
             else:
                 print("kirjuta P või N!!!")
         else:
-            print("Vale nimi, parool või proovisõna")
+            print("Sisestage õige nimi ja parool")

@@ -9,13 +9,13 @@ while True:
     "6. (admin)kõigi loendite kontrollimine\n"
     ))
     if Lll == 1:
-        reg()
+        reg(k, s, sõna)
     elif Lll == 2:
-        log()
+        log(s, k)
     elif Lll == 3:
-        muudaP()
+        muudaP(s, k)
     elif Lll == 4:
-        muuda()
+        muuda(k, s)
     elif Lll == 5:
         print("Nägemist")
         break
