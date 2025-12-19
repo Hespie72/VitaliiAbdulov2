@@ -38,7 +38,7 @@ def log(s, k):
         N = input("Sisetage nimi: ")
         Par = input("Sisetage parool: ")
         if_autoriseeritud = False
-        if N in k and Par in s:
+        if N in k and s[k.index(N)] == Par:
             if_autoriseeritud = True
             print("Olete oma kontole edukalt sisse loginud.")
             break
