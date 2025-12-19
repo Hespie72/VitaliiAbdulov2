@@ -53,6 +53,7 @@ def muudaP(s, k):
             uusparool = input("Sisestage uus parool: ")
             indeksp = k.index(N)
             s[indeksp] = uusparool
+            print("parool on muuda")
             break
         else:
             print("vale nimi või proovisõna")
@@ -68,11 +69,13 @@ def muuda(k, s):
                 uusparool = input("Sisestage uus parool: ")
                 indeksp = k.index(N)
                 s[indeksp] = uusparool
+                print("parool on muuda")
                 break
             elif T == "N":
                 uusnimi = input("Sisetage uus nimi: ")
                 indeksn = s.index(Par)
                 k[indeksn] = uusnimi
+                print("nimi on muuda")
                 break
             else:
                 print("kirjuta P või N!!!")
