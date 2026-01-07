@@ -5,7 +5,7 @@
     <ProjectGuid>aee0276b-3c0a-4336-a83a-9ab28f9b477d</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>reglog2.py</StartupFile>
+    <StartupFile>email1message.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="email1message.py" />
     <Compile Include="reglog2.py" />
     <Compile Include="reglog1.py" />
   </ItemGroup>
