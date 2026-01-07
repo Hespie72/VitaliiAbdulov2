@@ -2,7 +2,7 @@ import smtplib, ssl
 from email.message import EmailMessage
 #iccp iixp npok vsnp
 def saada_email(saaja_email):
-    kiri="""Tere see on test"""
+    kiri="""Tere see on test https://github.com/Hespie72/VitaliiAbdulov2/blob/master/VitaliiAbdulov2/email1message.py"""
     teema="Test e-kiri Pythonist"
     saatja_email="vitalya.abdulov.1979@gmail.com"
     parool=input("Sisesta rakenduse parool: ")
