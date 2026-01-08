@@ -14,6 +14,9 @@ def saada_email(saaja_email):
     msg["Subject"]=teema
     msg["From"]=saatja_email
     msg["To"]=saaja_email
+    with open ("image.png", "rb") as f:
+        image_data = f.read()
+    msg.add_attachment(image_data, maintype="image", subtype="png")
     try:
         with smtplib.SMTP(smtp_server,port) as server:
             server.starttls(context=context)
